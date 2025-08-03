@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ElectricityMeter</defName>
+    <label>electricity meter</label>
+    <description>A meter that connects to a power grid and displays the power usage of all devices on that network.</description>
+    <thingClass>ElectricityMeter.Building_ElectricityMeter</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>ElectricityMeter/Things/Building/Meter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shaderType>Cutout</shaderType>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <tickerType>Normal</tickerType>
+    <designationCategory>Power</designationCategory>
+    <researchPrerequisites>
+      <li>ElectricityMeterResearch</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

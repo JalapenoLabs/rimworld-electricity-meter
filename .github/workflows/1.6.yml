@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ######################### #
+      #        Setup Phase        #
+      # ######################### #
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          submodules: 'recursive'
+
+      - name: Load SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Trust GitHub's host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Setup Rimworld DLL
+        working-directory: ../..
+        run: |
+          git clone git@github.com:JalapenoLabs/RimworldDll.git RimWorldWin64_Data
+
+      # ######################### #
+      #     Pre-build Metrics     #
+      # ######################### #
+
+      # - name: Record original DLL checksum
+      #   id: dll_hash
+      #   run: |
+      #     sha256sum 1.6/Assemblies/FishingIsFun.dll \
+      #       | cut -d' ' -f1 \
+      #       | tee original.hash
+      #     echo "hash=$(cat original.hash)" >> $GITHUB_OUTPUT
+
+      # ######################### #
+      #        Build Phase        #
+      # ######################### #
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Dotnet restore
+        run: dotnet restore .vscode
+
+      - name: Build
+        run: dotnet build .vscode
+
+      # ######################### #
+      #      Validation Phase     #
+      # ######################### #
+
+      - name: Validate XML (xmllint)
+        uses: phpcsstandards/xmllint-validate@v1
+        with:
+          pattern: "1.6/Defs/**/*.xml"
+          show-in-pr: true
+
+      - name: Validate XML (xmllint)
+        uses: phpcsstandards/xmllint-validate@v1
+        with:
+          pattern: "About/About.xml"
+          show-in-pr: true
+
+      # ######################### #
+      #      Check for changes    #
+      # ######################### #
+
+      # - name: Fail if DLL changed
+      #   run: |
+      #     new=$(sha256sum 1.6/Assemblies/FishingIsFun.dll | cut -d' ' -f1)
+      #     echo "Original: ${{ steps.dll_hash.outputs.hash }}"
+      #     echo "Current:  $new"
+      #     if [ "$new" != "${{ steps.dll_hash.outputs.hash }}" ]; then
+      #       echo "::error title=DLL Changed::FishingIsFun.dll was modified by the build"
+      #       exit 1
+      #     fi

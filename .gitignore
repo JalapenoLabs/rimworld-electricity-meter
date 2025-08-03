@@ -1,0 +1,7 @@
+/.vscode/obj
+/*.sln 
+
+/obj
+/bin
+
+/workshop

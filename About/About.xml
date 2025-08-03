@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Electricity Meter</name>
+	<author>JalapenoLabs</author>
+	<modVersion>2025.8.3</modVersion>
+	
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	
+	<!-- <modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+	</modDependencies> -->
+
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+	</loadAfter>
+
+	<modIconPath IgnoreIfNoMatchingField="True">ElectricityMeter/UI/Logo</modIconPath>
+	<packageId>jalapenolabs.rimworld.electricitymeter</packageId>
+	<url>https://github.com/JalapenoLabs/rimworld-electricity-meter</url>
+	<description>What is using up all my electricity?!
+
+<!-- Write a full description here please! -->
+
+Patreon: https://www.jalapenolabs.io/patreon
+	</description>
+</ModMetaData>
