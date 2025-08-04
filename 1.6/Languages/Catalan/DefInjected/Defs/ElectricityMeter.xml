@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Mesurador d'electricitat</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Permet construir un mesurador d'electricitat que pot supervisar i mostrar el consum d'electricitat en una xarxa elèctrica.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Mesurador d'electricitat</ElectricityMeter.label>
+  <ElectricityMeter.description>Un mesurador que es connecta a una xarxa elèctrica i mostra el consum d'electricitat de tots els dispositius d'aquesta xarxa.</ElectricityMeter.description>
+
+</LanguageData>

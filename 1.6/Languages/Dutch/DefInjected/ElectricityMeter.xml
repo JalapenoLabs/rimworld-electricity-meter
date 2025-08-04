@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Elektriciteitsmeter</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Maakt het mogelijk een elektriciteitsmeter te bouwen die het verbruik in een elektriciteitsnetwerk kan monitoren en weergeven.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Elektriciteitsmeter</ElectricityMeter.label>
+  <ElectricityMeter.description>Een meter die verbinding maakt met een stroomnetwerk en het verbruik van alle apparaten in dat netwerk weergeeft.</ElectricityMeter.description>
+
+</LanguageData>

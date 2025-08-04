@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <ResearchProjectDef>
+    <defName>ElectricityMeterResearch</defName>
+    <label>Electricity meter</label>
+    <description>Allows construction of a power meter that can monitor and display electricity usage on a power network.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>0.30</researchViewY>
+  </ResearchProjectDef>
+  
   <ThingDef ParentName="BuildingBase">
     <defName>ElectricityMeter</defName>
     <label>electricity meter</label>
@@ -31,6 +44,9 @@
         <transmitsPower>true</transmitsPower>
       </li>
     </comps>
+    <inspectorTabs>
+      <li>ElectricityMeterTab</li>
+    </inspectorTabs>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
@@ -40,4 +56,11 @@
       <li>ElectricityMeterResearch</li>
     </researchPrerequisites>
   </ThingDef>
+
+  <!-- <InspectTabDef>
+    <defName>ElectricityMeterTab</defName>
+    <label>Power</label>
+    <description>Shows the electricity usage breakdown for this power network.</description>
+    <tabClass>ElectricityMeter.ITab_ElectricityMeter</tabClass>
+  </InspectTabDef> -->
 </Defs>

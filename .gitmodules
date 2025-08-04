@@ -1,0 +1,3 @@
+[submodule "translator"]
+	path = translator
+	url = git@github.com:JalapenoLabs/rimworld-mod-llm-auto-translator.git
