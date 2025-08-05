@@ -4,9 +4,11 @@
 
 Have you ever thought "What is using all my power?!"
 
-This mod introduces a power meter, that once attached to a power grid it will show you a breakdown of the power usage and generation of that grid.
+Introducing a researchable power meter!
 
-It will show you the total power cost, the total power generation, and a breakdown of each power generator and consumer in the grid.
+Once it's attached to a power grid, it will show you a full breakdown of:
+- All power consumption items on the grid
+- All power generation items on the grid
 
 ![Example](About/Example.png)
 

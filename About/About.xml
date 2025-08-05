@@ -3,12 +3,13 @@
 <ModMetaData>
 	<name>Electricity Meter</name>
 	<author>JalapenoLabs</author>
-	<modVersion>2025.8.3</modVersion>
-	
+	<modVersion>2025.8.5</modVersion>
+
 	<supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>
-	
+
+	<!-- Not needed, we ship with our own harmony dll -->
 	<!-- <modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -27,8 +28,12 @@
 	<url>https://github.com/JalapenoLabs/rimworld-electricity-meter</url>
 	<description>What is using up all my electricity?!
 
-<!-- Write a full description here please! -->
+		Introducing a researchable power meter!
 
-Patreon: https://www.jalapenolabs.io/patreon
-	</description>
+		Once it's attached to a power grid, it will show you a full breakdown of:
+		- All power consumption items on the grid
+		- All power generation items on the grid
+
+		All languages supported, and open source. Enjoy!
+		Patreon: https://www.jalapenolabs.io/patreon </description>
 </ModMetaData>
