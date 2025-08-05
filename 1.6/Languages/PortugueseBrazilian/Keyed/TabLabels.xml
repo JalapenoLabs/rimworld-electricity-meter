@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Consumo de energia</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Produtores de energia</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Consumo total de energia: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Consumo total de energia: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Produção total de energia: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Excesso na rede: {0} W</ElectricityMeter_TotalExcess>
 

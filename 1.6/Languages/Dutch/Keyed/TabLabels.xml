@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Vermogensverbruik</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Elektriciteitsopwekkers</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Totaal vermogensverbruik: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Totaal vermogensverbruik: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Totale vermogensproductie: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Overschot op het net: {0} W</ElectricityMeter_TotalExcess>
 

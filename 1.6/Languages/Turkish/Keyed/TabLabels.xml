@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Güç tüketimi</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Güç üreticileri</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Toplam güç tüketimi: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Toplam güç tüketimi: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Toplam güç üretimi: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Şebeke fazlası: {0} W</ElectricityMeter_TotalExcess>
 

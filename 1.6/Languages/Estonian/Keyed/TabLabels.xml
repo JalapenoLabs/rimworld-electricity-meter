@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Võimsustarve</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Elektritootjad</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Kogu võimsustarve: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Kogu võimsustarve: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Kogu elektritootmine: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Võrgu ülejääk: {0} W</ElectricityMeter_TotalExcess>
 

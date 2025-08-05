@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>消費電力</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>発電装置</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>総消費電力: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>総消費電力: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>総発電量: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>余剰電力: {0} W</ElectricityMeter_TotalExcess>
 

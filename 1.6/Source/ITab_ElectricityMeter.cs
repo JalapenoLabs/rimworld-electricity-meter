@@ -46,7 +46,7 @@ public class ITab_ElectricityMeter : ITab {
 
     // how many text lines we'll draw:
     //   one per breakdown line, plus an optional gap, plus the total line
-    int totalLines = 2; // Base 2 for the final end Gap(), final excess message
+    int totalLines = 0;
 
     // ————— Consumption block —————
     if (meter.costBreakdown.Count > 0) {
@@ -123,13 +123,6 @@ public class ITab_ElectricityMeter : ITab {
       );
       listing.Gap();
     }
-
-    listing.Gap();
-    listing.Label(
-      "ElectricityMeter_TotalExcess".Translate(
-        (meter.totalPowerGeneration - meter.totalPowerCost).ToString("F0")
-      )
-    );
 
     // finish up
     listing.End();

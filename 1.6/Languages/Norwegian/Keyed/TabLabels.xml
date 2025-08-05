@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Strømforbruk</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Strømprodusenter</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Totalt strømforbruk: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Totalt strømforbruk: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Totalt strømproduksjon: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Overskudd i nettet: {0} W</ElectricityMeter_TotalExcess>
 

@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Consum de energie electrică</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Producători de energie electrică</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Consum total de energie electrică: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Consum total de energie electrică: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Producție totală de energie electrică: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Exces în rețea: {0} W</ElectricityMeter_TotalExcess>
 

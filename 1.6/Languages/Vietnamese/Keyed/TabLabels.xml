@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Tiêu thụ điện</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Thiết bị phát điện</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Tổng tiêu thụ điện: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Tổng tiêu thụ điện: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Tổng sản lượng điện: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Dư thừa lưới điện: {0} W</ElectricityMeter_TotalExcess>
 

@@ -79,7 +79,7 @@ public class Building_ElectricityMeter : Building {
                 continue;
             }
             ThingDef def = cp.parent.def;
-            float usage = -cp.PowerOutput;  // base consumption in Watts
+            float usage = cp.PowerOutput;  // base consumption in Watts
 
             if (cp.PowerOutput >= 0f) {
                 if (!generatorsByDef.ContainsKey(def)) {
@@ -88,9 +88,9 @@ public class Building_ElectricityMeter : Building {
 
                 var entry = generatorsByDef[def];
                 entry.count += 1;
-                entry.total += usage * -1f;  // convert to positive for generation
+                entry.total += usage;  // convert to positive for generation
                 generatorsByDef[def] = entry;
-                totalPowerGeneration += usage * -1f;
+                totalPowerGeneration += usage;
             }
             else {
                 if (!consumptionByDef.ContainsKey(def)) {

@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Stromverbrauch</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Stromerzeuger</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Gesamtstromverbrauch: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Gesamtstromverbrauch: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Gesamtstromerzeugung: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Netzüberschuss: {0} W</ElectricityMeter_TotalExcess>
 

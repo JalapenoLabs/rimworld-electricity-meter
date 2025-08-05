@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>전력 소비</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>전력 생산기</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>총 전력 소비: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>총 전력 소비: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>총 전력 생산: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>전력망 잉여: {0} W</ElectricityMeter_TotalExcess>
 

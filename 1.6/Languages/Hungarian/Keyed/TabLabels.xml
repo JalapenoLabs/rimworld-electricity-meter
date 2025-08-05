@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Energiafogyasztás</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Áramtermelők</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Összes fogyasztás: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Összes fogyasztás: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Összes termelés: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Hálózati többlet: {0} W</ElectricityMeter_TotalExcess>
 

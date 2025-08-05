@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Tehonkulutus</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Tehontuottajat</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Kokonaistehonkulutus: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Kokonaistehonkulutus: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Kokonaistehontuotanto: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Verkon ylijäämä: {0} W</ElectricityMeter_TotalExcess>
 

@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Κατανάλωση ισχύος</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Παραγωγοί ενέργειας</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Συνολική κατανάλωση ισχύος: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Συνολική κατανάλωση ισχύος: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Συνολική παραγωγή ισχύος: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Πλεόνασμα δικτύου: {0} W</ElectricityMeter_TotalExcess>
 

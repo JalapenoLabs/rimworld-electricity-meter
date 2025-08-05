@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Spotreba energie</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Výrobcovia energie</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Celková spotreba energie: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Celková spotreba energie: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Celková výroba energie: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Prebytok siete: {0} W</ElectricityMeter_TotalExcess>
 

@@ -6,7 +6,7 @@
   <ElectricityMeter_PowerConsumption>Power consumption</ElectricityMeter_PowerConsumption>
   <ElectricityMeter_PowerProducers>Power producers</ElectricityMeter_PowerProducers>
 
-  <ElectricityMeter_TotalPowerConsumption>Total power consumption: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerConsumption>Total power consumption: {0} W</ElectricityMeter_TotalPowerConsumption>
   <ElectricityMeter_TotalPowerProduction>Total power production: +{0} W</ElectricityMeter_TotalPowerProduction>
   <ElectricityMeter_TotalExcess>Grid surplus: {0} W</ElectricityMeter_TotalExcess>
 
