@@ -42,7 +42,7 @@ dotnet build .vscode
 Open this repository in Visual Studio Code, and use Ctrl+Shift+B to build the assemblies for the mod.
 
 # Steam URL:
-<TODO>
+https://steamcommunity.com/sharedfiles/filedetails/?id=3542488017
 
 # Repository:
 View the source code, contribute, or report issues on GitHub:
