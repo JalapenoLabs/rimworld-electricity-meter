@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ElectricityMeter_Power>Power</ElectricityMeter_Power>
+
+  <!-- Labels -->
+  <ElectricityMeter_NotConnected>Not connected to any power grid.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Power consumption</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Power producers</ElectricityMeter_PowerProducers>
+
+  <!-- Totals -->
+  <ElectricityMeter_TotalPowerConsumption>Total power consumption: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Total power production: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Grid excess: {0} W</ElectricityMeter_TotalExcess>
+
+  <!-- Descriptions -->
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+</LanguageData>

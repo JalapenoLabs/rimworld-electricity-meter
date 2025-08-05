@@ -7,149 +7,145 @@
  * MIT License
  */
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 
-namespace ElectricityMeter {
-    // Mod entry point & definition
-    public class ModEntry : Mod {
-        public ModEntry(ModContentPack content) : base(content) {
-            var harmony = new Harmony("jalapenolabs.rimworld.electricitymeter");
-            harmony.PatchAll();
+namespace ElectricityMeter;
 
-            Log.Message("⚡💥Electricity Meter mod was successfully loaded!");
+// Mod entry point & definition
+public class ModEntry : Mod {
+    public ModEntry(ModContentPack content) : base(content) {
+        var harmony = new Harmony("jalapenolabs.rimworld.electricitymeter");
+        harmony.PatchAll();
+
+        Log.Message("⚡💥Electricity Meter mod was successfully loaded!");
+    }
+}
+
+public class Building_ElectricityMeter : Building {
+    // Stores the latest breakdown of power usage by def, and total consumption
+    public float totalPowerCost = 0f;
+    public List<string> costBreakdown = new List<string>();
+
+    public float totalPowerGeneration = 0f;
+    public List<string> generationBreakdown = new List<string>();
+
+    // Whether the meter is connected to a power grid with other devices
+    public bool connected = false;
+
+    // Ticks
+    private int tickCount = 0;
+    private int tickInterval = 60;
+
+    protected override void Tick() {
+        base.Tick();
+        tickCount++;
+
+        if (!Spawned || (tickCount % tickInterval) != 0) {
+            return;
         }
+
+        // Only update when selected, to save performance
+        if (Find.Selector.SingleSelectedThing != this) {
+            return;
+        }
+
+        RecalculatePowerUsage();
     }
 
-    public class Building_ElectricityMeter : Building {
-        // Stores the latest breakdown of power usage by def, and total consumption
-        public List<string> breakdownLines = new List<string>();
-        public float totalPower = 0f;
-        public bool connected = false;  // whether the meter is connected to a power grid with other devices
+    public void RecalculatePowerUsage() {
+        costBreakdown.Clear();
+        generationBreakdown.Clear();
+        totalPowerCost = 0f;
+        totalPowerGeneration = 0f;
+        var net = PowerComp?.PowerNet;
+        connected = !(net == null || (net.transmitters.Count <= 1 && net.connectors.Count == 0));
 
-        private int ticksSinceLastUpdate = 0;
-        private const int UpdateIntervalTicks = 60;  // Recalculate once per second (60 ticks)
+        if (!connected) {
+            return;
+        }
 
-        protected override void Tick() {
-            base.Tick();
-            if (Spawned && Find.Selector.SingleSelectedThing == this) {
-                // Only update when selected, to save performance
-                ticksSinceLastUpdate++;
-                if (ticksSinceLastUpdate >= UpdateIntervalTicks) {
-                    ticksSinceLastUpdate = 0;
-                    RecalculatePowerUsage();
+        // We must iterate twice to group items by count (to group multiple same defs)
+
+        // Group power consumption by thing def
+        var consumptionByDef = new Dictionary<ThingDef, (int count, float total, float each)>();
+        var generatorsByDef = new Dictionary<ThingDef, (int count, float total, float each)>();
+        foreach (var cp in net.powerComps) {
+            if (!cp.PowerOn) {
+                continue;
+            }
+            ThingDef def = cp.parent.def;
+            float usage = -cp.PowerOutput;  // base consumption in Watts
+
+            if (cp.PowerOutput >= 0f) {
+                if (!generatorsByDef.ContainsKey(def)) {
+                    generatorsByDef[def] = (0, 0f, usage);
                 }
+
+                var entry = generatorsByDef[def];
+                entry.count += 1;
+                entry.total += usage * -1f;  // convert to positive for generation
+                generatorsByDef[def] = entry;
+                totalPowerGeneration += usage * -1f;
             }
             else {
-                // Reset counter when not selected
-                ticksSinceLastUpdate = 0;
+                if (!consumptionByDef.ContainsKey(def)) {
+                    consumptionByDef[def] = (0, 0f, usage);
+                }
+
+                var entry = consumptionByDef[def];
+                entry.count += 1;
+                entry.total += usage;
+                consumptionByDef[def] = entry;
+                totalPowerCost += usage;
             }
         }
 
-        public void RecalculatePowerUsage() {
-            breakdownLines.Clear();
-            totalPower = 0f;
-            connected = false;
-            var net = PowerComp?.PowerNet;
-    
-            if (net == null || (net.transmitters.Count <= 1 && net.connectors.Count == 0)) {
-                // Not connected to any meaningful power network
-                breakdownLines.Add("Not connected to any power grid.");
-                connected = false;
-                totalPower = 0f;
-                return;
-            }
-
-            connected = true;
-            // Group power consumption by thing def
-            var consumptionByDef = new Dictionary<ThingDef, (int count, float total, float each)>();
-            foreach (var cp in net.powerComps) {
-                if (cp.PowerOn && cp.PowerOutput < 0f) {
-                    ThingDef def = cp.parent.def;
-                    float usage = -cp.PowerOutput;  // base consumption in Watts
-
-                    if (!consumptionByDef.ContainsKey(def)) {
-                        consumptionByDef[def] = (0, 0f, usage);
-                    }
-
-                    var entry = consumptionByDef[def];
-                    entry.count += 1;
-                    entry.total += usage;
-                    // 'each' remains the same (usage) for all in this group
-                    consumptionByDef[def] = entry;
-                    totalPower += usage;
-                }
-            }
-
-            // Sort groups by total power descending for readability
-            foreach (var kvp in consumptionByDef.OrderByDescending(e => e.Value.total)) {
-                ThingDef def = kvp.Key;
-                int count = kvp.Value.count;
-                float total = kvp.Value.total;
-                float each = kvp.Value.each;
-                if (count > 1) {
-                    breakdownLines.Add($"{def.label.CapitalizeFirst()} x{count} ({each:F0} W each): {total:F0} W");
-                }
-                else {
-                    breakdownLines.Add($"{def.label.CapitalizeFirst()}: {total:F0} W");
-                }
-            }
-            // If no consumers on the net, breakdownLines will be empty (totalPower will be 0).
-            // (Total will still be displayed in the ITab even if no devices are consuming power.)
-        }
-    }
-
-    public class ITab_ElectricityMeter : ITab {
-        public ITab_ElectricityMeter() {
-            this.size = new Vector2(300f, 400f);
-            this.labelKey = "Power";    // Label for the tab button (shown as "Power")
-            this.tutorTag = "Power";    // Tutor tag for tutorial system
-            Log.Message("Registering ITab_ElectricityMeter");
-        }
-
-        // On opening the tab, recalc immediately for up-to-date data
-        public override void OnOpen() {
-            base.OnOpen();
-            if (SelThing is Building_ElectricityMeter meter) {
-                meter.RecalculatePowerUsage();
-            }
-        }
-
-        protected override void FillTab() {
-            Text.Font = GameFont.Small;
-            Building_ElectricityMeter meter = SelThing as Building_ElectricityMeter;
-            if (meter == null) {
-                return;
-            };
-
-            Rect rect = new Rect(0f, 0f, size.x, size.y).ContractedBy(10f);
-            Listing_Standard listing = new Listing_Standard();
-            listing.Begin(rect);
-            if (!meter.connected) {
-                // Display not-connected message
-                if (meter.breakdownLines.Count > 0) {
-                    listing.Label(meter.breakdownLines[0]);
-                }
+        // Sort groups by total power descending for readability
+        foreach (var kvp in consumptionByDef.OrderByDescending(e => e.Value.total)) {
+            ThingDef def = kvp.Key;
+            if (kvp.Value.count > 1) {
+                costBreakdown.Add(
+                    "ElectricityMeter_ConsumptionMany".Translate(
+                        def.label.CapitalizeFirst(),
+                        kvp.Value.total.ToString("F0"),
+                        kvp.Value.count.ToString()
+                    )
+                );
             }
             else {
-                // List each group’s consumption
-                foreach (string line in meter.breakdownLines) {
-                    listing.Label(line);
-                }
-                // Draw a line then total consumption at the end
-                if (meter.breakdownLines.Count > 0) {
-                    listing.GapLine();
-                }
-                listing.Label($"Total: {meter.totalPower:F0} W");
+                costBreakdown.Add(
+                    "ElectricityMeter_ConsumptionOne".Translate(
+                        def.label.CapitalizeFirst(),
+                        kvp.Value.total.ToString("F0")
+                    )
+                );
             }
-            listing.End();
+        }
+
+        foreach (var kvp in generatorsByDef.OrderByDescending(e => e.Value.total)) {
+            ThingDef def = kvp.Key;
+            if (kvp.Value.count > 1) {
+                generationBreakdown.Add(
+                    "ElectricityMeter_GenerationMany".Translate(
+                        def.label.CapitalizeFirst(),
+                        kvp.Value.total.ToString("F0"),
+                        kvp.Value.count.ToString()
+                    )
+                );
+            }
+            else {
+                generationBreakdown.Add(
+                    "ElectricityMeter_GenerationOne".Translate(
+                        def.label.CapitalizeFirst(),
+                        kvp.Value.total.ToString("F0")
+                    )
+                );
+            }
         }
     }
 }

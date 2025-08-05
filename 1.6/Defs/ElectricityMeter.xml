@@ -1,66 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ResearchProjectDef>
+    <!-- Name -->
     <defName>ElectricityMeterResearch</defName>
     <label>Electricity meter</label>
-    <description>Allows construction of a power meter that can monitor and display electricity usage on a power network.</description>
-    <baseCost>400</baseCost>
+    <description>Allows construction of a power meter that can monitor and display electricity usage
+      on a power network.</description>
+
+    <!-- Graphic -->
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>0.30</researchViewY>
+
+    <!-- Requirements -->
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>Electricity</li>
     </prerequisites>
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>0.30</researchViewY>
+    <baseCost>400</baseCost>
   </ResearchProjectDef>
-  
+
   <ThingDef ParentName="BuildingBase">
+    <!-- Name -->
     <defName>ElectricityMeter</defName>
     <label>electricity meter</label>
-    <description>A meter that connects to a power grid and displays the power usage of all devices on that network.</description>
-    <thingClass>ElectricityMeter.Building_ElectricityMeter</thingClass>
-    <category>Building</category>
+    <description>A meter that connects to a power grid and displays the power usage of all devices
+      on that network.</description>
+
+    <!-- World -->
+    <tickerType>Normal</tickerType>
+    <passability>Standable</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
     <graphicData>
       <texPath>ElectricityMeter/Things/Building/Meter</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
       <shaderType>Cutout</shaderType>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>Standable</passability>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <statBases>
-      <MaxHitPoints>120</MaxHitPoints>
-      <WorkToBuild>200</WorkToBuild>
-      <Flammability>0.5</Flammability>
-      <Beauty>-2</Beauty>
-    </statBases>
-    <costList>
-      <Steel>50</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
-    </costList>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTransmitter</compClass>
         <transmitsPower>true</transmitsPower>
       </li>
     </comps>
-    <inspectorTabs>
-      <li>ElectricityMeterTab</li>
-    </inspectorTabs>
-    <rotatable>false</rotatable>
-    <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+
+    <!-- Orders -->
+    <category>Building</category>
     <designationCategory>Power</designationCategory>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+
+    <!-- Game -->
     <researchPrerequisites>
       <li>ElectricityMeterResearch</li>
     </researchPrerequisites>
-  </ThingDef>
 
-  <!-- <InspectTabDef>
-    <defName>ElectricityMeterTab</defName>
-    <label>Power</label>
-    <description>Shows the electricity usage breakdown for this power network.</description>
-    <tabClass>ElectricityMeter.ITab_ElectricityMeter</tabClass>
-  </InspectTabDef> -->
+    <!-- Logic -->
+    <thingClass>ElectricityMeter.Building_ElectricityMeter</thingClass>
+
+    <inspectorTabs>
+      <li>ElectricityMeter.ITab_ElectricityMeter</li>
+    </inspectorTabs>
+  </ThingDef>
 </Defs>
