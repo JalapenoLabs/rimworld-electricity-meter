@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Электросчётчик</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Позволяет создавать электросчётчик, который может контролировать и отображать потребление электроэнергии в сети.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Электросчётчик</ElectricityMeter.label>
+  <ElectricityMeter.description>Счётчик, который подключается к электросети и отображает потребление энергии всеми устройствами в этой сети.</ElectricityMeter.description>
+
+</LanguageData>

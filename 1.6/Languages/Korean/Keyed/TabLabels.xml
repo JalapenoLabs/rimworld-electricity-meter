@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>전력</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>어떤 전력망에도 연결되어 있지 않습니다.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>전력 소비</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>전력 생산기</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>총 전력 소비: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>총 전력 생산: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>전력망 잉여: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

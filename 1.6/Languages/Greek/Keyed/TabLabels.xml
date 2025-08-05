@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Ισχύς</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Δεν είναι συνδεδεμένο σε κανένα δίκτυο ρεύματος.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Κατανάλωση ισχύος</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Παραγωγοί ενέργειας</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Συνολική κατανάλωση ισχύος: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Συνολική παραγωγή ισχύος: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Πλεόνασμα δικτύου: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

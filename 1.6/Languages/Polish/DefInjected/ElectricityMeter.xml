@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Licznik energii elektrycznej</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Pozwala na konstrukcję licznika mocy, który może monitorować i wyświetlać zużycie energii elektrycznej w sieci energetycznej.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Licznik energii elektrycznej</ElectricityMeter.label>
+  <ElectricityMeter.description>Licznik, który łączy się z siecią energetyczną i wyświetla zużycie energii wszystkich urządzeń w tej sieci.</ElectricityMeter.description>
+
+</LanguageData>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Potência</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Não conectado a nenhuma rede de energia.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Consumo de energia</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Geradores de energia</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Consumo total de energia: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Produção total de energia: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Excedente da rede: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

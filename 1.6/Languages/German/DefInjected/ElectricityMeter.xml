@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Stromzähler</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Ermöglicht den Bau eines Stromzählers, der den Stromverbrauch eines Stromnetzes überwachen und anzeigen kann.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Stromzähler</ElectricityMeter.label>
+  <ElectricityMeter.description>Ein Messgerät, das an ein Stromnetz angeschlossen ist und den Stromverbrauch aller Geräte in diesem Netzwerk anzeigt.</ElectricityMeter.description>
+
+</LanguageData>

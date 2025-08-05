@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Elektrik ölçer</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Güç şebekesindeki elektrik kullanımını izleyip görüntüleyebilen bir elektrik ölçer inşa etmeyi sağlar.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Elektrik ölçer</ElectricityMeter.label>
+  <ElectricityMeter.description>Bir güç şebekesine bağlanarak ağdaki tüm cihazların elektrik tüketimini gösteren bir ölçer.</ElectricityMeter.description>
+
+</LanguageData>

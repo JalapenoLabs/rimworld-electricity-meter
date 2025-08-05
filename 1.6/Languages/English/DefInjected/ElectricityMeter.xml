@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Electricity meter</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Allows construction of a power meter that can monitor and display electricity usage on a power network.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>electricity meter</ElectricityMeter.label>
+  <ElectricityMeter.description>A meter that connects to a power grid and displays the power usage of all devices on that network.</ElectricityMeter.description>
+
+</LanguageData>

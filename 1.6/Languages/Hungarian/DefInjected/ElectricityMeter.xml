@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Villanyóra</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Lehetővé teszi egy árammérő építését, amely figyeli és megjeleníti az elektromos hálózat energiafogyasztását.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Villanyóra</ElectricityMeter.label>
+  <ElectricityMeter.description>Egy mérőóra, amely csatlakozik az elektromos hálózathoz, és megjeleníti a hálózaton lévő összes eszköz energiafogyasztását.</ElectricityMeter.description>
+
+</LanguageData>

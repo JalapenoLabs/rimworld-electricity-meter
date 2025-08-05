@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Elmåler</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Tillader konstruktion af en elmåler, der kan overvåge og vise elforbruget på et strømnetværk.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Elmåler</ElectricityMeter.label>
+  <ElectricityMeter.description>En måler, der tilsluttes et elnet og viser elforbruget for alle enheder på dette netværk.</ElectricityMeter.description>
+
+</LanguageData>

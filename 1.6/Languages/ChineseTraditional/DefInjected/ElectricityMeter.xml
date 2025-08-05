@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>電錶</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>允許建造一個可監測並顯示電力網路用電量的電錶。</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>電錶</ElectricityMeter.label>
+  <ElectricityMeter.description>連接到電力網路並顯示該網路上所有裝置的用電量的電錶。</ElectricityMeter.description>
+
+</LanguageData>

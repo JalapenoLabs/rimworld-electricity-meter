@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Vermogen</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Niet aangesloten op een elektriciteitsnet.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Vermogensverbruik</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Elektriciteitsopwekkers</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Totaal vermogensverbruik: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Totale vermogensproductie: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Overschot op het net: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

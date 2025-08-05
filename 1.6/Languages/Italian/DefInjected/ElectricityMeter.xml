@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Contatore elettrico</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Consente di costruire un contatore elettrico in grado di monitorare e visualizzare il consumo di energia di una rete elettrica.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Contatore elettrico</ElectricityMeter.label>
+  <ElectricityMeter.description>Un contatore che si collega alla rete elettrica e mostra il consumo di energia di tutti i dispositivi presenti sulla rete.</ElectricityMeter.description>
+
+</LanguageData>

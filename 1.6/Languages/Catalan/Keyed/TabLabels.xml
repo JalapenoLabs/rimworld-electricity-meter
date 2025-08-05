@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Potència</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>No està connectat a cap xarxa elèctrica.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Consum d'energia</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Productors d'energia</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Consum total d'energia: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Producció total d'energia: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Excedent de xarxa: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ElectricityMeterResearch.label>Medidor eléctrico</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Permite la construcción de un medidor eléctrico que puede monitorear y mostrar el consumo de electricidad en una red eléctrica.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Medidor eléctrico</ElectricityMeter.label>
+  <ElectricityMeter.description>Un medidor que se conecta a la red eléctrica y muestra el consumo de energía de todos los dispositivos en esa red.</ElectricityMeter.description>
+</LanguageData>

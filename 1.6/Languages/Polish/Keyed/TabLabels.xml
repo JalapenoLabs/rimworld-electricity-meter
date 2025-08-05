@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Moc</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Nie podłączono do żadnej sieci energetycznej.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Zużycie energii</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Źródła energii</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Całkowite zużycie energii: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Całkowita produkcja energii: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Nadmiar w sieci: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

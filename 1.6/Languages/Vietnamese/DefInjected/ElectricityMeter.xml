@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Đồng hồ đo điện</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Cho phép xây dựng một đồng hồ điện có thể theo dõi và hiển thị mức tiêu thụ điện năng trên một mạng lưới điện.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Đồng hồ đo điện</ElectricityMeter.label>
+  <ElectricityMeter.description>Một đồng hồ nối vào lưới điện và hiển thị mức tiêu thụ điện năng của tất cả thiết bị trên mạng lưới đó.</ElectricityMeter.description>
+
+</LanguageData>

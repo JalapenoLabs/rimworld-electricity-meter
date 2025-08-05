@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Elmätare</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Gör det möjligt att konstruera en elmätare som kan övervaka och visa elförbrukningen i ett elnät.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Elmätare</ElectricityMeter.label>
+  <ElectricityMeter.description>En mätare som ansluts till ett elnät och visar elförbrukningen för alla enheter i det nätverket.</ElectricityMeter.description>
+
+</LanguageData>

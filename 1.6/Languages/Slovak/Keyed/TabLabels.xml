@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Elektrina</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Nie je pripojené k žiadnej elektrickej sieti.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Spotreba energie</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Výrobcovia energie</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Celková spotreba energie: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Celková výroba energie: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Prebytok siete: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

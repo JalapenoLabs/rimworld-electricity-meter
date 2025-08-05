@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Công suất</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Không được kết nối với bất kỳ lưới điện nào.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Tiêu thụ điện</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Thiết bị phát điện</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Tổng tiêu thụ điện: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Tổng sản lượng điện: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Dư thừa lưới điện: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

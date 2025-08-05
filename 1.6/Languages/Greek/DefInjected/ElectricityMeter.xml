@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Μετρητής ηλεκτρικής ενέργειας</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Επιτρέπει την κατασκευή ενός μετρητή ρεύματος που μπορεί να παρακολουθεί και να εμφανίζει την κατανάλωση ηλεκτρικής ενέργειας σε ένα ηλεκτρικό δίκτυο.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Μετρητής ηλεκτρικής ενέργειας</ElectricityMeter.label>
+  <ElectricityMeter.description>Μετρητής που συνδέεται σε ένα ηλεκτρικό δίκτυο και εμφανίζει την κατανάλωση ενέργειας όλων των συσκευών σε αυτό το δίκτυο.</ElectricityMeter.description>
+
+</LanguageData>

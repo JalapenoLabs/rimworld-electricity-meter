@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Sähkömittari</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Sallii sähkömittarin rakentamisen, joka voi seurata ja näyttää sähkönkäyttöä sähköverkossa.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>sähkömittari</ElectricityMeter.label>
+  <ElectricityMeter.description>Mittari, joka kytkeytyy sähköverkkoon ja näyttää kyseisen verkon kaikkien laitteiden sähkönkulutuksen.</ElectricityMeter.description>
+
+</LanguageData>

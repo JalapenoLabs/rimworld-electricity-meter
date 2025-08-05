@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Потужність</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Не підключено до жодної електромережі.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Споживання електроенергії</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Генератори електроенергії</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Загальне споживання електроенергії: -{0} Вт</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Загальне виробництво електроенергії: +{0} Вт</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Надлишок у мережі: {0} Вт</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} Вт (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} Вт</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} Вт (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} Вт</ElectricityMeter_GenerationOne>
+
+</LanguageData>

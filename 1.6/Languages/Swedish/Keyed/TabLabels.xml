@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Effekt</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Inte ansluten till något elnät.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Effektförbrukning</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Energiproducenter</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Total effektförbrukning: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Total effektproduktion: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Överskott i nätet: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

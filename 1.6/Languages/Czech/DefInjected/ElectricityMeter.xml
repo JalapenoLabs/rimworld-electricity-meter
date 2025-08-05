@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Elektroměr</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Umožňuje stavbu elektroměru, který dokáže sledovat a zobrazovat spotřebu elektřiny v elektrické síti.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>elektroměr</ElectricityMeter.label>
+  <ElectricityMeter.description>Zařízení, které se připojí k elektrické síti a zobrazuje spotřebu elektřiny všech zařízení na této síti.</ElectricityMeter.description>
+
+</LanguageData>

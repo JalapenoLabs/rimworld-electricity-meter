@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>電力</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>未連接至任何電網。</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>耗電量</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>發電設備</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>總耗電量：-{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>總發電量：+{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>電網盈餘：{0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}：{1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}：{1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}：{1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}：{1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

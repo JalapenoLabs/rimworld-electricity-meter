@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Strøm</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Ikke tilkoblet noe strømnett.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Strømforbruk</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Strømprodusenter</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Totalt strømforbruk: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Totalt strømproduksjon: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Overskudd i nettet: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

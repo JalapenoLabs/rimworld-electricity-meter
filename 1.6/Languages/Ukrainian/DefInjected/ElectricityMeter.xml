@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Лічильник електроенергії</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Дозволяє будувати лічильник електроенергії, який може відстежувати та відображати використання електроенергії в електромережі.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>лічильник електроенергії</ElectricityMeter.label>
+  <ElectricityMeter.description>Лічильник, що під'єднується до електромережі та відображає споживання електроенергії всіма пристроями в цій мережі.</ElectricityMeter.description>
+
+</LanguageData>

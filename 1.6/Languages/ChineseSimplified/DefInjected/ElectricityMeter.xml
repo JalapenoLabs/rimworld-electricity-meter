@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>电力表</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>允许建造一个可以监测并显示电网用电量的电力表。</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>电力表</ElectricityMeter.label>
+  <ElectricityMeter.description>连接到电网的仪表，用于显示该网络上所有设备的用电量。</ElectricityMeter.description>
+
+</LanguageData>

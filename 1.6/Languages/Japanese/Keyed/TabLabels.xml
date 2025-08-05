@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>電力</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>電力網に接続されていません。</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>消費電力</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>発電装置</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>総消費電力: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>総発電量: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>余剰電力: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

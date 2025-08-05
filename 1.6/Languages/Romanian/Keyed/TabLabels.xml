@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter_Power>Putere</ElectricityMeter_Power>
+  <ElectricityMeter_NotConnected>Nu este conectat la nicio rețea electrică.</ElectricityMeter_NotConnected>
+  <ElectricityMeter_PowerConsumption>Consum de energie electrică</ElectricityMeter_PowerConsumption>
+  <ElectricityMeter_PowerProducers>Producători de energie electrică</ElectricityMeter_PowerProducers>
+
+  <ElectricityMeter_TotalPowerConsumption>Consum total de energie electrică: -{0} W</ElectricityMeter_TotalPowerConsumption>
+  <ElectricityMeter_TotalPowerProduction>Producție totală de energie electrică: +{0} W</ElectricityMeter_TotalPowerProduction>
+  <ElectricityMeter_TotalExcess>Exces în rețea: {0} W</ElectricityMeter_TotalExcess>
+
+  <ElectricityMeter_ConsumptionMany>{0}: {1} W (x{2})</ElectricityMeter_ConsumptionMany>
+  <ElectricityMeter_ConsumptionOne>{0}: {1} W</ElectricityMeter_ConsumptionOne>
+  <ElectricityMeter_GenerationMany>{0}: {1} W (x{2})</ElectricityMeter_GenerationMany>
+  <ElectricityMeter_GenerationOne>{0}: {1} W</ElectricityMeter_GenerationOne>
+
+</LanguageData>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Elektrimõõtur</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Võimaldab ehitada voolumõõturi, mis jälgib ja kuvab elektrivõrgu energiatarbimist.</ElectricityMeterResearch.description>
+
+  <ElectricityMeter.label>Elektrimõõtur</ElectricityMeter.label>
+  <ElectricityMeter.description>Mõõtur, mis ühendub elektrivõrguga ja kuvab kõigi selles võrgus olevate seadmete energiatarbimist.</ElectricityMeter.description>
+
+</LanguageData>
