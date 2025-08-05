@@ -11,6 +11,11 @@ jobs:
   verify:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        version:
+          - '1.6'
+
     steps:
       # ######################### #
       #        Setup Phase        #
@@ -58,6 +63,11 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
+      # Update .vscode/mod.csproj, replace all '1.6' to the matrix version
+      - name: Modify mod.csproj
+        run: |
+          sed -i 's/1.6/${{ matrix.version }}/g' .vscode/mod.csproj
+
       - name: Dotnet restore
         run: dotnet restore .vscode
 
@@ -71,7 +81,7 @@ jobs:
       - name: Validate XML (xmllint)
         uses: phpcsstandards/xmllint-validate@v1
         with:
-          pattern: "1.6/Defs/**/*.xml"
+          pattern: "${{ matrix.version }}/Defs/**/*.xml"
           show-in-pr: true
 
       - name: Validate XML (xmllint)
