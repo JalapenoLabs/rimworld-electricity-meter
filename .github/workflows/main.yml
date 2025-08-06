@@ -40,7 +40,7 @@ jobs:
       - name: Setup Rimworld DLL
         working-directory: ../..
         run: |
-          git clone git@github.com:JalapenoLabs/RimworldDll.git RimWorldWin64_Data
+          git clone git@github.com:JalapenoLabs/RimworldForCICD.git RimWorldWin64_Data
 
       # ######################### #
       #     Pre-build Metrics     #

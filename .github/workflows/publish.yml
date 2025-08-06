@@ -12,10 +12,16 @@ jobs:
   steam-publish:
     runs-on: ubuntu-latest
 
-    # ONLY if on a workflow dispatch
-    if: github.event_name == 'workflow_dispatch'
-
     steps:
+      - name: Ensure owner is running this workflow
+        run: |
+          # ONLY if on a workflow dispatch and the owner is the one triggering it
+          if [ "${{ github.actor }}" != "${{ github.repository_owner }}" ]; then
+            echo "Error: Only the repository owner can trigger this workflow."
+            echo "Current actor: ${{ github.actor }}"
+            echo "Repository owner: ${{ github.repository_owner }}"
+            exit 1
+          fi
       - name: Ensure required inputs are set
         run: |
           if [ -z "${{ github.event.inputs.message }}" ]; then
@@ -24,7 +30,7 @@ jobs:
           fi
 
           if [ -z "${{ vars.STEAM_WORKSHOP_ID }}" ]; then
-            echo "Error: 'STEAM_WORKSHOP_ID' secret is required."
+            echo "Error: 'STEAM_WORKSHOP_ID' variable is required."
             exit 1
           fi
 
@@ -76,7 +82,7 @@ jobs:
 
           echo "========================================="
           echo "Updated modVersion in About/About.xml to:"
-          cat About/About.xml | grep modVersion
+          grep modVersion About/About.xml
 
       - name: Create Steam Workshop VDF
         run: |
