@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # ONLY if on a workflow dispatch and the owner is the one triggering it
-    if: github.event_name == 'workflow_dispatch' && github.actor == 'navarrotech'
+    if: github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner
 
     steps:
       - name: Ensure required inputs are set
