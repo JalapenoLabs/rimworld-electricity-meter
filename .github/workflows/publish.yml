@@ -12,8 +12,8 @@ jobs:
   steam-publish:
     runs-on: ubuntu-latest
 
-    # ONLY if on a workflow dispatch
-    if: github.event_name == 'workflow_dispatch'
+    # ONLY if on a workflow dispatch and the owner is the one triggering it
+    if: github.event_name == 'workflow_dispatch' && github.actor == 'navarrotech'
 
     steps:
       - name: Ensure required inputs are set
