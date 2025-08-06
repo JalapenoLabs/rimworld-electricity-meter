@@ -24,7 +24,7 @@ jobs:
           fi
 
           if [ -z "${{ vars.STEAM_WORKSHOP_ID }}" ]; then
-            echo "Error: 'STEAM_WORKSHOP_ID' secret is required."
+            echo "Error: 'STEAM_WORKSHOP_ID' variable is required."
             exit 1
           fi
 
