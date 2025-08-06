@@ -6,6 +6,12 @@ on:
       - main
   pull_request:
   workflow_dispatch:
+    inputs:
+      message:
+        description: 'Release note for the Steam Workshop update'
+        required: true
+        type: string
+
 
 jobs:
   verify:
@@ -46,6 +52,7 @@ jobs:
       #     Pre-build Metrics     #
       # ######################### #
 
+      # This doesn't work because the DLL always gets a new checksum when it is built (something to do with the build timestamp)
       # - name: Record original DLL checksum
       #   id: dll_hash
       #   run: |
@@ -107,3 +114,119 @@ jobs:
       #       echo "::error title=DLL Changed::FishingIsFun.dll was modified by the build"
       #       exit 1
       #     fi
+
+      - name: Cache built DLLs
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ matrix.version }}/Assemblies/*.dll
+          key: ${{ runner.os }}-${{ matrix.version }}-dll-${{ github.run_id }}
+
+  steam-publish:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    needs: [
+      verify
+    ]
+
+    steps:
+      - name: Ensure owner is running this workflow
+        run: |
+          # fail if neither the repo owner nor 'navarrotech' triggered this
+          if [[ "$GITHUB_ACTOR" != "$GITHUB_REPOSITORY_OWNER" && "$GITHUB_ACTOR" != "navarrotech" ]]; then
+            echo "::error title=Unauthorized Actor::Only the repository owner can trigger this workflow"
+            echo "Current actor: $GITHUB_ACTOR"
+            echo "Repository owner: $GITHUB_REPOSITORY_OWNER"
+            exit 1
+          fi
+
+      - name: Ensure required inputs are set
+        run: |
+          if [ -z "${{ github.event.inputs.message }}" ]; then
+            echo "Error: 'message' input is required."
+            exit 1
+          fi
+
+          if [ -z "${{ vars.STEAM_WORKSHOP_ID }}" ]; then
+            echo "Error: 'STEAM_WORKSHOP_ID' variable is required."
+            exit 1
+          fi
+
+          # if [ -z "${{ secrets.STEAM_USERNAME }}" ]; then
+          #   echo "Error: 'STEAM_USERNAME' secret is required."
+          #   exit 1
+          # fi
+
+          # if [ -z "${{ secrets.STEAM_GSLT }}" ]; then
+          #   echo "Error: 'STEAM_GSLT' secret is required."
+          #   exit 1
+          # fi
+
+          if [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
+            echo "Error: 'SSH_PRIVATE_KEY' secret is required."
+            exit 1
+          fi
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          submodules: 'recursive'
+
+      - name: Restore DLL cache
+        uses: actions/cache/restore@v4
+        with:
+          path: 1.6/Assemblies/*.dll
+          key: ${{ runner.os }}-1.6-dll-${{ github.run_id }}
+
+      - name: Prepare files to publish
+        run: |
+          mkdir dist
+          cp -r About dist/
+          cp -r Textures dist/
+          cp -r 1.6 dist/
+          cp README.md dist/
+          cp LICENSE dist/
+
+      - name: Bump modVersion to today's date
+        working-directory: dist
+        run: |
+          # produce e.g. 2025.8.5
+          VERSION=$(date +%Y.%-m.%-d)
+          echo "Updating About/About.xml → modVersion = $VERSION"
+          # replace whatever is between the tags
+          sed -E -i "s|<modVersion>[^<]+</modVersion>|<modVersion>$VERSION</modVersion>|" About/About.xml
+
+          echo "========================================="
+          echo "Updated modVersion in About/About.xml to:"
+          grep modVersion About/About.xml
+
+      - name: Create Steam Workshop VDF
+        run: |
+          cat > workshop_build.vdf <<EOF
+          "workshopitem"
+          {
+              "appid"           "294100" # Rimworld game ID
+              "publishedfileid" "${{ vars.STEAM_WORKSHOP_ID }}"
+              "contentfolder"   "${{ github.workspace }}/dist"
+              "changenote"      "${{ github.event.inputs.message }}"
+          }
+          EOF
+
+          cat workshop_build.vdf
+
+      - name: Debug
+        working-directory: dist
+        run: |
+          echo "Current directory: ${{ github.workspace }} === $(pwd)"
+          echo "Files:"
+          ls -R -la .
+
+      - name: Setup steamcmd
+        uses: CyberAndrii/setup-steamcmd@v1
+
+      # - name: Publish to Steam Workshop
+      #   run: |
+      #     steamcmd \
+      #       +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_GSLT }}" \
+      #       +workshop_build workshop_build.vdf \
+      #       +quit
