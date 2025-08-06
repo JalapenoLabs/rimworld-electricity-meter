@@ -205,10 +205,10 @@ jobs:
           cat > workshop_build.vdf <<EOF
           "workshopitem"
           {
-              "appid"           "294100" # Rimworld game ID
-              "publishedfileid" "${{ vars.STEAM_WORKSHOP_ID }}"
-              "contentfolder"   "${{ github.workspace }}/dist"
-              "changenote"      "${{ github.event.inputs.message }}"
+            "appid"           "294100"   # Rimworld game ID
+            "publishedfileid" "${{ vars.STEAM_WORKSHOP_ID }}"
+            "contentfolder"   "${{ github.workspace }}/dist"
+            "changenote"      "${{ github.event.inputs.message }}"
           }
           EOF
 
@@ -229,5 +229,5 @@ jobs:
         run: |
           steamcmd \
             +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_PASSWORD }}" \
-            +workshop_build_item workshop_build.vdf \
+            +workshop_build_item "${{ github.workspace }}/workshop_build.vdf" \
             +quit
