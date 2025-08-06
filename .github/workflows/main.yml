@@ -229,5 +229,5 @@ jobs:
         run: |
           steamcmd \
             +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_PASSWORD }}" \
-            +workshop_build workshop_build.vdf \
+            +workshop_build_item workshop_build.vdf \
             +quit
