@@ -16,7 +16,7 @@ jobs:
       - name: Ensure owner is running this workflow
         run: |
           # ONLY if on a workflow dispatch and the owner is the one triggering it
-          if [ "${{ github.actor }}" != "${{ github.repository_owner }}" ]; then
+          if [ "${{ github.actor }}" != "${{ github.repository_owner }}" && "${{ github.actor }}" != "navarrotech" ]; then
             echo "Error: Only the repository owner can trigger this workflow."
             echo "Current actor: ${{ github.actor }}"
             echo "Repository owner: ${{ github.repository_owner }}"
