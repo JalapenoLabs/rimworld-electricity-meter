@@ -223,7 +223,6 @@ jobs:
 
       - name: Setup steamcmd
         uses: CyberAndrii/setup-steamcmd@v1
-        # sudo add-apt-repository multiverse && sudo apt update -y && sudo apt install -y steamcmd
 
       # - name: Publish to Steam Workshop
       #   run: |
