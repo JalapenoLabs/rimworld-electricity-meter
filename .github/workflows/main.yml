@@ -156,8 +156,8 @@ jobs:
           #   exit 1
           # fi
 
-          # if [ -z "${{ secrets.STEAM_GSLT }}" ]; then
-          #   echo "Error: 'STEAM_GSLT' secret is required."
+          # if [ -z "${{ secrets.STEAM_PASSWORD }}" ]; then
+          #   echo "Error: 'STEAM_PASSWORD' secret is required."
           #   exit 1
           # fi
 
@@ -228,6 +228,6 @@ jobs:
       - name: Publish to Steam Workshop
         run: |
           steamcmd \
-            +login "${{ secrets.STEAM_USERNAME }}" "" "${{ secrets.STEAM_GSLT }}" \
+            +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_PASSWORD }}" \
             +workshop_build workshop_build.vdf \
             +quit
