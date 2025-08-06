@@ -12,7 +12,7 @@
 		<!-- Do not generate pdb file -->
 		<DebugType>none</DebugType>
 
-    <LangVersion>latest</LangVersion>
+		<LangVersion>latest</LangVersion>
 		<DebugSymbols>false</DebugSymbols>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 	</PropertyGroup>
@@ -22,7 +22,7 @@
 		<Compile Include="../1.6/Source/*" />
 
 		<!-- Rimworld -->
-		<Reference Include="../../../RimWorldWin64_Data/Managed/*.dll">
+		<Reference Include="../RimworldForCICD/Managed/*.dll">
 			<Private>False</Private>
 		</Reference>
 
