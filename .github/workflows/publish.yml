@@ -1,0 +1,112 @@
+name: Publish to Steam Workshop
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Release note for the Steam Workshop update'
+        required: true
+        type: string
+
+jobs:
+  steam-publish:
+    runs-on: ubuntu-latest
+
+    # ONLY if on a workflow dispatch and the owner is the one triggering it
+    if: github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner
+
+    steps:
+      - name: Ensure required inputs are set
+        run: |
+          if [ -z "${{ github.event.inputs.message }}" ]; then
+            echo "Error: 'message' input is required."
+            exit 1
+          fi
+
+          if [ -z "${{ vars.STEAM_WORKSHOP_ID }}" ]; then
+            echo "Error: 'STEAM_WORKSHOP_ID' variable is required."
+            exit 1
+          fi
+
+          # if [ -z "${{ secrets.STEAM_USERNAME }}" ]; then
+          #   echo "Error: 'STEAM_USERNAME' secret is required."
+          #   exit 1
+          # fi
+
+          # if [ -z "${{ secrets.STEAM_GSLT }}" ]; then
+          #   echo "Error: 'STEAM_GSLT' secret is required."
+          #   exit 1
+          # fi
+
+          if [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
+            echo "Error: 'SSH_PRIVATE_KEY' secret is required."
+            exit 1
+          fi
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          submodules: 'recursive'
+
+      - name: Restore cached assemblies
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            **/*.dll
+          key: ${{ runner.os }}-1.6-${{ hashFiles('**/*.cs') }}
+
+      - name: Prepare files to publish
+        run: |
+          mkdir dist
+          cp -r About dist/
+          cp -r Textures dist/
+          cp -r 1.6 dist/
+          cp README.md dist/
+          cp LICENSE dist/
+
+      - name: Bump modVersion to today's date
+        working-directory: dist
+        run: |
+          # produce e.g. 2025.8.5
+          VERSION=$(date +%Y.%-m.%-d)
+          echo "Updating About/About.xml → modVersion = $VERSION"
+          # replace whatever is between the tags
+          sed -E -i "s|<modVersion>[^<]+</modVersion>|<modVersion>$VERSION</modVersion>|" About/About.xml
+
+          echo "========================================="
+          echo "Updated modVersion in About/About.xml to:"
+          grep modVersion About/About.xml
+
+      - name: Create Steam Workshop VDF
+        run: |
+          cat > workshop_build.vdf <<EOF
+          "workshopitem"
+          {
+              "appid"           "294100" # Rimworld game ID
+              "publishedfileid" "${{ vars.STEAM_WORKSHOP_ID }}"
+              "contentfolder"   "${{ github.workspace }}/dist"
+              "changenote"      "${{ github.event.inputs.message }}"
+          }
+          EOF
+
+          cat workshop_build.vdf
+
+      - name: Debug
+        working-directory: dist
+        run: |
+          echo "Current directory: ${{ github.workspace }} === $(pwd)"
+          echo "Files:"
+          ls -R -la .
+
+      - name: Install SteamCMD
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y steamcmd
+
+      # - name: Publish to Steam Workshop
+      #   run: |
+      #     steamcmd \
+      #       +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_GSLT }}" \
+      #       +workshop_build workshop_build.vdf \
+      #       +quit
