@@ -76,7 +76,7 @@ jobs:
 
           echo "========================================="
           echo "Updated modVersion in About/About.xml to:"
-          cat About/About.xml | grep modVersion
+          grep modVersion About/About.xml
 
       - name: Create Steam Workshop VDF
         run: |
