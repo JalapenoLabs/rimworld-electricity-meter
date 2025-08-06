@@ -223,10 +223,11 @@ jobs:
 
       - name: Setup steamcmd
         uses: CyberAndrii/setup-steamcmd@v1
+        # sudo add-apt-repository multiverse && sudo apt update -y && sudo apt install -y steamcmd
 
-      # - name: Publish to Steam Workshop
-      #   run: |
-      #     steamcmd \
-      #       +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_GSLT }}" \
-      #       +workshop_build workshop_build.vdf \
-      #       +quit
+      - name: Publish to Steam Workshop
+        run: |
+          steamcmd \
+            +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_GSLT }}" \
+            +workshop_build workshop_build.vdf \
+            +quit
