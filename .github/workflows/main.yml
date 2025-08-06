@@ -228,6 +228,6 @@ jobs:
       - name: Publish to Steam Workshop
         run: |
           steamcmd \
-            +login "${{ secrets.STEAM_USER }}" "" "${{ secrets.STEAM_GSLT }}" \
+            +login "${{ secrets.STEAM_USERNAME }}" "" "${{ secrets.STEAM_GSLT }}" \
             +workshop_build workshop_build.vdf \
             +quit
