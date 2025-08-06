@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ResearchProjectDef>
-    <!-- Name -->
-    <defName>ElectricityMeterResearch</defName>
-    <label>Electricity meter</label>
-    <description>Allows construction of a power meter that can monitor and display electricity usage
-      on a power network.</description>
-
-    <!-- Graphic -->
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>0.30</researchViewY>
-
-    <!-- Requirements -->
-    <techLevel>Industrial</techLevel>
-    <prerequisites>
-      <li>Electricity</li>
-    </prerequisites>
-    <baseCost>400</baseCost>
-  </ResearchProjectDef>
-
   <ThingDef ParentName="BuildingBase">
     <!-- Name -->
     <defName>ElectricityMeter</defName>
@@ -62,7 +43,7 @@
 
     <!-- Game -->
     <researchPrerequisites>
-      <li>ElectricityMeterResearch</li>
+      <li>Electricity</li>
     </researchPrerequisites>
 
     <!-- Logic -->
