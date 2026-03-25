@@ -1,7 +1,3 @@
 # Changelog
 
-All notable changes to Electricity Meter will be documented here.
-
----
-
-## [Unreleased]
+2025.8.5 - Initial release
