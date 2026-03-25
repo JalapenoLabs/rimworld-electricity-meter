@@ -1,8 +1,22 @@
-/.vscode/obj
-/*.sln 
+# ── Build artifacts ──────────────────────────────────────────────────────────
+/obj/
+/bin/
 
-/obj
-/bin
+# ── Legacy editor artifacts (from pre-monorepo layout) ───────────────────────
+/.vscode/obj/
 
-/workshop
+# ── Solution files (managed at monorepo root) ────────────────────────────────
+*.sln
+
+# ── Steam Workshop publish artifacts ─────────────────────────────────────────
+/workshop/
 workshop_build.vdf
+
+# ── Design tool lock files ───────────────────────────────────────────────────
+*.afdesign~lock~
+
+# ── Environment / secrets ────────────────────────────────────────────────────
+*.env
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
