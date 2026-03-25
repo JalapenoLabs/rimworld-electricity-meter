@@ -1,11 +1,7 @@
 
 all: build
 
-# Builds the mod using dotnet
-# Read the README.md for more info
+# Builds the mod DLL using dotnet.
+# RimworldForCICD DLLs are provided by the root-level submodule.
 build:
-	dotnet build .vscode
-
-publish: build
-	@echo "Running PowerShell publish script…"
-	powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(CURDIR)/publish.ps1"
+	dotnet build mod.csproj

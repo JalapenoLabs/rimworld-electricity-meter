@@ -6,7 +6,7 @@
 
 		<RootNamespace>ElectricityMeter</RootNamespace>
 		<AssemblyName>ElectricityMeter</AssemblyName>
-		<OutputPath>../1.6/Assemblies</OutputPath>
+		<OutputPath>1.6/Assemblies</OutputPath>
 		<VersionPrefix>0.1.0.0</VersionPrefix>
 
 		<!-- Do not generate pdb file -->
@@ -19,15 +19,15 @@
 
 	<ItemGroup>
 		<!-- Mod -->
-		<Compile Include="../1.6/Source/*" />
+		<Compile Include="1.6/Source/*" />
 
-		<!-- Rimworld -->
+		<!-- Rimworld — references the shared root-level RimworldForCICD submodule -->
 		<Reference Include="../RimworldForCICD/Managed/*.dll">
 			<Private>False</Private>
 		</Reference>
 
 		<!-- *Uncomment for Harmony*-->
-		<Reference Include="../1.6/Assemblies/0Harmony.dll">
+		<Reference Include="1.6/Assemblies/0Harmony.dll">
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
