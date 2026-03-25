@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>elektriciteitsmeter</ElectricityMeter.label>
+  <ElectricityMeter.description>Een meter die is aangesloten op een elektriciteitsnetwerk en het stroomverbruik van alle apparaten op dat netwerk weergeeft.</ElectricityMeter.description>
+
+</LanguageData>

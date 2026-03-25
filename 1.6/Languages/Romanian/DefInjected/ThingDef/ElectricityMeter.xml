@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>contor de electricitate</ElectricityMeter.label>
+  <ElectricityMeter.description>Un contor care se conectează la o rețea electrică și afișează consumul de energie al tuturor dispozitivelor din acea rețea.</ElectricityMeter.description>
+
+</LanguageData>

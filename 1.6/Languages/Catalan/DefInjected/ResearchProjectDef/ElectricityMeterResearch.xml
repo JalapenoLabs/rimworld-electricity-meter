@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Comptador d'electricitat</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Permet la construcció d'un comptador d'electricitat que pot supervisar i mostrar el consum d'electricitat en una xarxa elèctrica.</ElectricityMeterResearch.description>
+
+</LanguageData>

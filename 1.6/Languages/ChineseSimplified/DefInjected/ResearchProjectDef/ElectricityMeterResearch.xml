@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>电力表</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>允许建造一个可以监测并显示电网用电量的电力表。</ElectricityMeterResearch.description>
+
+</LanguageData>

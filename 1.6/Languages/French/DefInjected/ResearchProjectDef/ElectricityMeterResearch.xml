@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Compteur électrique</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Permet la construction d'un compteur électrique capable de surveiller et d'afficher la consommation d'électricité sur un réseau électrique.</ElectricityMeterResearch.description>
+
+</LanguageData>

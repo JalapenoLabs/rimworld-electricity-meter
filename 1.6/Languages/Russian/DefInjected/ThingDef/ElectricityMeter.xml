@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Электросчётчик</ElectricityMeter.label>
+  <ElectricityMeter.description>Счётчик, который подключается к электросети и отображает потребление энергии всеми устройствами в этой сети.</ElectricityMeter.description>
+
+</LanguageData>

@@ -28,7 +28,7 @@
 		</Reference>
 
 		<!-- *Uncomment for Harmony*-->
-		<Reference Include="1.6/Assemblies/0Harmony.dll">
+		<Reference Include="../../binaries/0Harmony.dll">
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>

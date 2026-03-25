@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>Strømmåler</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>Gir mulighet til å bygge en strømmåler som kan overvåke og vise strømforbruket i et strømnettverk.</ElectricityMeterResearch.description>
+
+</LanguageData>

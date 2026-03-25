@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>elektroměr</ElectricityMeter.label>
+  <ElectricityMeter.description>Zařízení, které se připojí k elektrické síti a zobrazuje spotřebu elektřiny všech zařízení na této síti.</ElectricityMeter.description>
+
+</LanguageData>

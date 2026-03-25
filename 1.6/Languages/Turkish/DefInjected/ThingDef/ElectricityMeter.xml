@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Elektrik ölçer</ElectricityMeter.label>
+  <ElectricityMeter.description>Bir güç şebekesine bağlanarak ağdaki tüm cihazların elektrik tüketimini gösteren bir ölçer.</ElectricityMeter.description>
+
+</LanguageData>

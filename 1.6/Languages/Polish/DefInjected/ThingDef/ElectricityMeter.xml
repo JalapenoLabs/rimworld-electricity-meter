@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Licznik energii elektrycznej</ElectricityMeter.label>
+  <ElectricityMeter.description>Licznik, który łączy się z siecią energetyczną i wyświetla zużycie energii wszystkich urządzeń w tej sieci.</ElectricityMeter.description>
+
+</LanguageData>

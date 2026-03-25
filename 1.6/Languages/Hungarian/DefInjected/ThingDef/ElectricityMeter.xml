@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Villanyóra</ElectricityMeter.label>
+  <ElectricityMeter.description>Egy mérőóra, amely csatlakozik az elektromos hálózathoz, és megjeleníti a hálózaton lévő összes eszköz energiafogyasztását.</ElectricityMeter.description>
+
+</LanguageData>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Elektrimõõtur</ElectricityMeter.label>
+  <ElectricityMeter.description>Mõõtur, mis ühendub elektrivõrguga ja kuvab kõigi selles võrgus olevate seadmete energiatarbimist.</ElectricityMeter.description>
+
+</LanguageData>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>compteur électrique</ElectricityMeter.label>
+  <ElectricityMeter.description>Un compteur qui se connecte à un réseau électrique et affiche la consommation d'énergie de tous les appareils de ce réseau.</ElectricityMeter.description>
+
+</LanguageData>

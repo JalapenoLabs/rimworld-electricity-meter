@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeterResearch.label>電錶</ElectricityMeterResearch.label>
+  <ElectricityMeterResearch.description>允許建造一個可監測並顯示電力網路用電量的電錶。</ElectricityMeterResearch.description>
+
+</LanguageData>

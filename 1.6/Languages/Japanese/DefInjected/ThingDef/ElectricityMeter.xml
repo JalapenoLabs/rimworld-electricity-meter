@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>電力メーター</ElectricityMeter.label>
+  <ElectricityMeter.description>電力網に接続し、そのネットワーク上のすべての装置の電力使用量を表示するメーターです。</ElectricityMeter.description>
+
+</LanguageData>

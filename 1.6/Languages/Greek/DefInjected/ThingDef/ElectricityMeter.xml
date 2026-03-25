@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Μετρητής ηλεκτρικής ενέργειας</ElectricityMeter.label>
+  <ElectricityMeter.description>Μετρητής που συνδέεται σε ένα ηλεκτρικό δίκτυο και εμφανίζει την κατανάλωση ενέργειας όλων των συσκευών σε αυτό το δίκτυο.</ElectricityMeter.description>
+
+</LanguageData>

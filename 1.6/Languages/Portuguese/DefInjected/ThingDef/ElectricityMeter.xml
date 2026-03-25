@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Medidor de eletricidade</ElectricityMeter.label>
+  <ElectricityMeter.description>Um medidor que se conecta a uma rede de energia e exibe o consumo de eletricidade de todos os dispositivos nessa rede.</ElectricityMeter.description>
+
+</LanguageData>

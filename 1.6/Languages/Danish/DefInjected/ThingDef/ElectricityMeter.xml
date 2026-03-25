@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Elmåler</ElectricityMeter.label>
+  <ElectricityMeter.description>En måler, der tilsluttes et elnet og viser elforbruget for alle enheder på dette netværk.</ElectricityMeter.description>
+
+</LanguageData>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ElectricityMeter.label>Đồng hồ đo điện</ElectricityMeter.label>
+  <ElectricityMeter.description>Một đồng hồ nối vào lưới điện và hiển thị mức tiêu thụ điện năng của tất cả thiết bị trên mạng lưới đó.</ElectricityMeter.description>
+
+</LanguageData>
