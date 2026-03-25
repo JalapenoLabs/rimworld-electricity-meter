@@ -21,25 +21,27 @@ This is a mod designed for the Rimworld 1.6 base game.
 4. ***Does not require power***: The electricity meter does not require power to function.
 5. ***Must be placed on a power grid***: Simplifies the process of finding out which power grid is consuming or generating power.
 
-# Building & compiling from the source:
-This was compiled with Dotnet 9.0+ make sure you have it installed or a later version.
+# Building from source
 
-Clone this repository into your `steamapps/common/RimWorld/Mods` folder.
+This mod is part of the [rimworld-mods monorepo](https://github.com/JalapenoLabs/rimworld-mods), which provides the shared RimWorld DLLs and build tooling. **You must clone the monorepo — not this repository directly — in order to build.**
 
-### Using the command line:
+### Prerequisites
+- [.NET 9.0+](https://dotnet.microsoft.com/download)
+- [Mage](https://magefile.org/) — `go install github.com/magefile/mage/mage@latest`
 
-```shell
-make
-```
-
-Or if you don't have `make` installed, you can run:
+### Steps
 
 ```shell
-dotnet build .vscode
+git clone --recurse-submodules https://github.com/JalapenoLabs/rimworld-mods
+cd rimworld-mods
+mage build electricity-meter
 ```
 
-### Using Visual Studio Code:
-Open this repository in Visual Studio Code, and use Ctrl+Shift+B to build the assemblies for the mod.
+Or with Make:
+
+```shell
+make -C mods/electricity-meter
+```
 
 # Steam URL:
 https://steamcommunity.com/sharedfiles/filedetails/?id=3542488017
